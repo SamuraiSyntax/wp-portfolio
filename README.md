@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FolioBR - Thème WordPress Portfolio
 
 Un thème WordPress moderne et élégant conçu pour les portfolios professionnels. FolioBR offre une expérience utilisateur intuitive avec un design responsive et des fonctionnalités avancées pour mettre en valeur vos compétences et réalisations.
@@ -293,3 +294,6 @@ Format recommandés :
 - Images de réalisations : 1200x800px
 - Logos réseaux sociaux : 48x48px
 - Format : JPG, PNG ou SVG
+=======
+# wp-portfolio
+>>>>>>> 3fc2e4631c9ae722f4892712288f1998c32cf88b

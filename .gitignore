@@ -45,6 +45,7 @@ wp-config.php
 #
 # Note: If you wish to whitelist themes,
 # uncomment the next line
+<<<<<<< HEAD
 #/wp-content/themes
 
 # IDE and Editor files
@@ -77,3 +78,6 @@ yarn-error.log
 *.map
 *.min.css
 *.min.js
+=======
+#/wp-content/themes
+>>>>>>> 3fc2e4631c9ae722f4892712288f1998c32cf88b
