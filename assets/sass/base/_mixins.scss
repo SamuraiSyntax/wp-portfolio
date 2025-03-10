@@ -1,0 +1,80 @@
+@mixin typography($font-size: null, $line-height: null, $font-weight: null, $text-transform: null, $color: null) {
+  font-family: 'Jura', sans-serif;
+  font-style: normal;
+
+  @if $font-weight !=null {
+    font-weight: $font-weight;
+  }
+
+  @if $font-size !=null {
+    font-size: $font-size;
+  }
+
+  @if $line-height !=null {
+    line-height: $line-height;
+  }
+
+  @if $text-transform !=null {
+    text-transform: $text-transform;
+  }
+
+  @if $color !=null {
+    color: $color;
+  }
+}
+
+@mixin flex-style($justify: null, $align: null, $direction: null, $wrap: null, $content: null, $grow: null, $shrink: null) {
+  display: flex;
+
+  @if $justify !=null {
+    justify-content: $justify;
+  }
+
+  @if $align !=null {
+    align-items: $align;
+  }
+
+  @if $content !=null {
+    align-content: $content;
+  }
+
+  @if $direction !=null {
+    flex-direction: $direction;
+  }
+
+  @if $wrap !=null {
+    flex-wrap: $wrap;
+  }
+
+  @if $grow !=null {
+    flex-shrink: $grow;
+  }
+
+  @if $shrink !=null {
+    flex-grow: $shrink;
+  }
+}
+
+@mixin position-style($position: relative, $top: null, $right: null, $bottom: null, $left: null, $z-index: null) {
+  position: $position;
+
+  @if $top !=null {
+    top: $top;
+  }
+
+  @if $right !=null {
+    right: $right;
+  }
+
+  @if $bottom !=null {
+    bottom: $bottom;
+  }
+
+  @if $left !=null {
+    left: $left;
+  }
+
+  @if $z-index !=null {
+    z-index: $z-index;
+  }
+}

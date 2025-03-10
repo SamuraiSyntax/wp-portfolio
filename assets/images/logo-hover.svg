@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <text id="text-logo-svg-hidden" x="32" y="40" text-anchor="middle" font-size="32"
+    font-weight="regular" font-family="Jura" stroke="var(--br-primary)" stroke-width="10">BR</text>
+  <text id="text-logo-svg-fill" x="32" y="40" text-anchor="middle" font-size="32"
+    font-weight="regular" font-family="Jura">BR</text>
+</svg>

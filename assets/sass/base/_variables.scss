@@ -1,0 +1,84 @@
+// _variables.scss
+
+// Définition des variables générales
+$transition-duration: .3s;
+$blur-text-shadow: 0.1em;
+
+$color-white: #e1e1e1;
+$color-dark: #1E1E1E;
+$color-white-rgb: #{red($color-white)}, #{green($color-white)}, #{blue($color-white)};
+$color-dark-rgb: #{red($color-dark)}, #{green($color-dark)}, #{blue($color-dark)};
+
+/* 
+Définition des variables pour le thème sombre 
+*/
+
+$dark-color-primary: #C4ECAB;
+$dark-color-secondary: #ECD2FC;
+$dark-color-tertiary: #D4DAFF;
+$dark-link-color-primary: $dark-color-secondary;
+$dark-link-color-hover: $dark-color-primary;
+
+$dark-bg-color-primary: #1E1E1E;
+$dark-bg-color-secondary: #2f2f36;
+$dark-bg-color-tertiary: #1f1f22;
+$dark-border-color: #CCCCCC;
+$dark-text-color-primary: #e1e1e1;
+$dark-text-color-secondary: #d0d0c9;
+
+$dark-color-primary-rgb: #{red($dark-color-primary)}, #{green($dark-color-primary)}, #{blue($dark-color-primary)};
+$dark-color-secondary-rgb: #{red($dark-color-secondary)}, #{green($dark-color-secondary)}, #{blue($dark-color-secondary)};
+$dark-color-tertiary-rgb: #{red($dark-color-tertiary)}, #{green($dark-color-tertiary)}, #{blue($dark-color-tertiary)};
+$dark-link-color-primary-rgb: #{red($dark-link-color-primary)}, #{green($dark-link-color-primary)}, #{blue($dark-link-color-primary)};
+$dark-link-color-hover-rgb: #{red($dark-link-color-hover)}, #{green($dark-link-color-hover)}, #{blue($dark-link-color-hover)};
+$dark-bg-color-primary-rgb: #{red($dark-bg-color-primary)}, #{green($dark-bg-color-primary)}, #{blue($dark-bg-color-primary)};
+$dark-bg-color-secondary-rgb: #{red($dark-bg-color-secondary)}, #{green($dark-bg-color-secondary)}, #{blue($dark-bg-color-secondary)};
+$dark-bg-color-tertiary-rgb: #{red($dark-bg-color-tertiary)}, #{green($dark-bg-color-tertiary)}, #{blue($dark-bg-color-tertiary)};
+$dark-border-color-rgb: #{red($dark-border-color)}, #{green($dark-border-color)}, #{blue($dark-border-color)};
+$dark-text-color-primary-rgb: #{red($dark-text-color-primary)}, #{green($dark-text-color-primary)}, #{blue($dark-text-color-primary)};
+$dark-text-color-secondary-rgb: #{red($dark-text-color-secondary)}, #{green($dark-text-color-secondary)}, #{blue($dark-text-color-secondary)};
+
+/* 
+Définition des variables pour le thème clair 
+*/
+/* 
+$light-color-primary: #113606;
+$light-color-secondary: #312840;
+$light-color-tertiary: #1B253B; *//* 
+$light-color-primary: #529b3b;
+$light-color-secondary: #734abd;
+$light-color-tertiary: #002c8d; */
+
+$light-color-primary: #005303;
+$light-color-secondary: #611D8E;
+$light-color-tertiary: #0B3F6C; 
+$light-link-color-primary: $light-color-secondary;
+$light-link-color-hover: $light-color-primary;
+
+$light-bg-color-primary: #e1e1e1;
+$light-bg-color-secondary: #d0d0c9;
+$light-bg-color-tertiary: #e0e0dd;
+$light-border-color: #333333;
+$light-text-color-primary: #1e1e1e;
+$light-text-color-secondary: #2f2f36;
+
+$light-color-primary-rgb: #{red($light-color-primary)}, #{green($light-color-primary)}, #{blue($light-color-primary)};
+$light-color-secondary-rgb: #{red($light-color-secondary)}, #{green($light-color-secondary)}, #{blue($light-color-secondary)};
+$light-color-tertiary-rgb: #{red($light-color-tertiary)}, #{green($light-color-tertiary)}, #{blue($light-color-tertiary)};
+$light-link-color-primary-rgb: #{red($light-link-color-primary)}, #{green($light-link-color-primary)}, #{blue($light-link-color-primary)};
+$light-link-color-hover-rgb: #{red($light-link-color-hover)}, #{green($light-link-color-hover)}, #{blue($light-link-color-hover)};
+$light-bg-color-primary-rgb: #{red($light-bg-color-primary)}, #{green($light-bg-color-primary)}, #{blue($light-bg-color-primary)};
+$light-bg-color-secondary-rgb: #{red($light-bg-color-secondary)}, #{green($light-bg-color-secondary)}, #{blue($light-bg-color-secondary)};
+$light-bg-color-tertiary-rgb: #{red($light-bg-color-tertiary)}, #{green($light-bg-color-tertiary)}, #{blue($light-bg-color-tertiary)};
+$light-border-color-rgb: #{red($light-border-color)}, #{green($light-border-color)}, #{blue($light-border-color)};
+$light-text-color-primary-rgb: #{red($light-text-color-primary)}, #{green($light-text-color-primary)}, #{blue($light-text-color-primary)};
+$light-text-color-secondary-rgb: #{red($light-text-color-secondary)}, #{green($light-text-color-secondary)}, #{blue($light-text-color-secondary)};
+
+// Application des thèmes aux variables CSS root
+:root,
+:host,
+[data-br-theme=light],
+[data-br-theme=dark] {
+  --br-blur-text-shadow: #{$transition-duration};
+  --br-blur-text-shadow: #{$blur-text-shadow};
+}

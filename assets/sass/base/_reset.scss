@@ -1,0 +1,38 @@
+/* Box-sizing border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Reset margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset list style */
+ul,
+ol,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,80 @@
+#menu-header-mobile a {
+  @include typography(clamp(1.2rem, 1.0944rem + 0.4507vw, 1.5rem), 1.4, 400, none, var(--br-link-color));
+  -webkit-text-stroke: 0.4px var(--br-tertiary);
+}
+
+a:not(.btn-primary) {
+  color: var(--br-link-color);
+  border: 1px solid transparent;
+
+  &#theme-toggle {
+    color: inherit;
+
+    &:hover {
+      color: var(--br-link-color);
+    }
+  }
+
+  &:hover {
+    color: var(--br-link-hover);
+    border-bottom-color: var(--br-link-hover);
+  }
+}
+
+a.card {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.card-content a.btn-primary {
+  padding: .5em 1em;
+}
+
+button,
+a.btn-primary,
+.card a.btn-primary,
+input.wpcf7-form-control.wpcf7-submit,
+select {
+  @include flex-style(center, center, row, wrap, center);
+  gap: .5em;
+  padding: .5em 1em;
+  text-decoration: none;
+  text-align: center;
+  color: var(--br-bg-color-primary);
+  border: 0;
+  border-radius: 5px;
+  background: var(--br-link-color);
+
+  @media (max-width: 781px) {
+    padding: .5em;
+    width: auto;
+    line-height: 1;
+    font-size: 1.1rem;
+    text-align: justify;
+
+    &.previous {
+      justify-content: flex-start;
+      text-align: start;
+    }
+
+    &.next {
+      justify-content: flex-end;
+      text-align: end;
+    }
+
+  }
+
+  &:hover {
+    background: var(--br-link-hover);
+  }
+
+  svg {
+    color: var(--br-bg-color-primary);
+    stroke: var(--br-bg-color-primary);
+  }
+}

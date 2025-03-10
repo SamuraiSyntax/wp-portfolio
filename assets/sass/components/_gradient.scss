@@ -1,0 +1,33 @@
+.gradient {
+  --opacity: .2;
+  --size: 250px;
+  --speed: 60s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 2));
+  background-image: linear-gradient(rgba(var(--br-primary-rgb), var(--opacity)),
+      rgba(var(--br-secondary-rgb), var(--opacity)),
+      rgba(var(--br-tertiary-rgb), var(--opacity)));
+  animation: move var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+  @include position-style(absolute, null, null, null, null, 0);
+
+  @media (min-width: 720px) {
+    --size: 500px;
+  }
+}
+
+@keyframes move {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(calc(-50% + 5px), calc(-50% + 5px));
+  }
+}

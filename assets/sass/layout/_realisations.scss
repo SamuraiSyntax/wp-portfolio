@@ -1,0 +1,119 @@
+.section_realisations {
+  #realisations-container {
+    @include flex-style(flex-start, center, row, nowrap);
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1em 0;
+
+    @media (max-width: 781px) {
+      margin: 0;
+      padding-bottom: 0;
+      padding: 1vh 2vw;
+    }
+
+    //transform: rotateX(180deg);
+    .card-real-infos {
+      scroll-snap-align: center;
+      box-sizing: border-box;
+      @include flex-style(center, center, column, wrap, center, 0, 0);
+
+      width: auto;
+      max-height: 100%;
+      padding: 1em;
+      margin: 0 50%;
+
+      @media (max-width: 781px) {
+        flex-shrink: 0;
+        box-sizing: border-box;
+        width: auto;
+      }
+    }
+
+    .card-real {
+      @include flex-style(center, center, column, wrap, center, 0, 0);
+      scroll-snap-align: center;
+      padding: 1em;
+      margin: 0 50%;
+      min-width: 250px;
+      min-height: 250px;
+      //transform: rotateX(180deg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background-size: cover;
+      box-shadow: 0px 0px 10px 1px rgba(var(--br-tertiary-rgb), .5) inset;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        flex-grow: 3;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 50vh;
+        margin: auto;
+        background: rgba(var(--br-tertiary-rgb), 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+
+        .card-content {
+          @include flex-style(center, center, column, wrap, center);
+          @include position-style(absolute, null, null, null, null, null);
+          gap: 0.5em;
+          padding: 1em;
+          margin: 0px;
+          width: 100%;
+          height: 100%;
+          background: rgba(var(--br-bg-color-primary-rgb), 0.5);
+          box-shadow: 0px 0px 10px 1px rgba(var(--br-tertiary-rgb), 1) inset;
+
+          .card-description {
+            min-width: 250px;
+          }
+        }
+      }
+
+      .card-content {
+        display: none;
+        width: min-content;
+        gap: .5em;
+        padding: 0 1em;
+
+        .card-description {
+          min-width: 250px;
+        }
+      }
+    }
+  }
+}
+
+.post-type-archive-realisations #content {
+  //scroll-snap-type: y proximity;
+
+  .section.realisations-list {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-clip: content-box;
+    padding: 50px;
+    //scroll-snap-align: center;
+    border-radius: 10em;
+
+    @media (max-width: 781px) {
+      padding: 50px 10px;
+    }
+
+    .card {
+      background: rgba(var(--br-bg-color-primary-rgb), .9);
+      margin: 0 5vw;
+
+      &:hover {
+        background: rgba(var(--br-bg-color-primary-rgb), 1);
+      }
+    }
+  }
+}

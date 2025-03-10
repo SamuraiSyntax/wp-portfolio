@@ -1,0 +1,65 @@
+*,
+#wpadminbar * {
+  font-family: Jura, 'Jura';
+}
+
+#sections_container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0;
+  gap: .5em;
+}
+
+.section_container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0;
+  padding: 1em;
+  border: solid 1px var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+  gap: .5em;
+}
+
+.section_container h3 {
+  margin: 0;
+  padding: 0;
+
+}
+
+.section_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5em;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.section_content>* {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0;
+  align-content: flex-end;
+  width: 80%;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.section_content label {
+  max-width: 10%;
+  flex-grow: 0;
+}
+
+.remove_section_button {
+  justify-content: center;
+}
+
+textarea {
+  width: 100%;
+}

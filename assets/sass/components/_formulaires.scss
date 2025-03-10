@@ -1,0 +1,31 @@
+#realisations-filter,
+#competences-filter {
+  @include flex-style(center, flex-start, column, wrap, center);
+  display: none;
+  gap: 1em;
+  @include position-style(fixed, 50%, null, null, null, 10);
+  padding: 2em;
+  margin: 0;
+  margin-left: 1em;
+  color: var(--br-text-color-primary);
+  transform: translateY(-50%);
+
+  .btn-submit {
+    padding: 0.5em 1em;
+    margin: 0;
+    border: 0;
+    border-radius: 0.5em;
+    background: var(--br-primary);
+    color: var(--br-bg-color-primary);
+  }
+
+  select#categorie_competence {
+    padding: 0.5em 1em;
+    margin: 0;
+    border: 0;
+    border-radius: 0.5em;
+    background: var(--br-secondary);
+    color: var(--br-bg-color-primary);
+    @include flex-style(center, center, row, wrap, center);
+  }
+}

@@ -1,0 +1,131 @@
+.card {
+  @include flex-style(center, center, column, nowrap, center, 0);
+
+  width: fit-content;
+  min-width: min-content;
+  max-width: 100%;
+  height: fit-content;
+
+  padding: 2em 3em;
+  margin: 0;
+  z-index: 10;
+
+  font-weight: 400;
+  color: var(--br-text-color-primary);
+  background: rgba(var(--br-bg-color-primary-rgb), 0.5);
+  backdrop-filter: blur(0.2em);
+  -webkit-backdrop-filter: blur(0.2em);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid transparent;
+  border-radius: 8px 8px 8px 8px / 8px 8px 8px 8px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background: rgba(var(--br-bg-color-primary-rgb), 0.8);
+    border: 1px solid rgba(var(--br-border-color-rgb), 0.8);
+    animation: borderTransition 3s linear infinite alternate;
+  }
+
+  &.contact-form {
+    .card-description {
+      max-width: 30vw;
+
+      @media (max-width: 781px) {
+        max-width: 100%;
+        margin-top: 0.3em;
+      }
+    }
+  }
+
+  .card-title {
+    line-height: 1.3;
+    margin: 0;
+    font-size: clamp(1.7rem, 2.2326rem - 2.2723vw, 0.1875rem);
+    color: var(--br-secondary);
+
+    @media (max-width: 781px) {
+      line-height: 1.1;
+      font-size: 1.5rem;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  img.card-image {
+    flex-grow: 0;
+    max-height: 15vh;
+    margin: auto;
+    border-radius: 5px;
+  }
+
+  .card-description {
+    @include flex-style(center, center, row, wrap, flex-start);
+    max-width: 50vw;
+    //text-align: justify;
+
+    @media (max-width: 781px) {
+      max-width: 100%;
+      margin-top: .3em;
+      line-height: 1.1;
+      font-size: 1rem;
+      margin: 0;
+      width: 100%;
+      //text-align: justify;
+    }
+
+    &.description-section {
+      text-align: center;
+    }
+  }
+
+  a.btn-primary {
+    padding: .5em 1em;
+  }
+
+  strong {
+    color: var(--br-text-color-primary);
+    -webkit-text-stroke: thin;
+  }
+
+  ul.social-icons {
+    @include flex-style(center, center, row, wrap, center);
+    gap: .3em;
+
+    .social-icon-link img {
+      width: auto;
+      height: 2em;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  @media (max-width: 781px) {
+    @include flex-style(center, center, row, wrap, center);
+    padding: 1em;
+    max-height: 100%;
+    overflow: visible;
+
+    img.card-image {
+      flex-grow: 0;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    .card-content {
+      @include flex-style(center, flex-start, row, wrap, flex-start, 1);
+      height: auto;
+      width: auto;
+      max-height: 100%;
+
+      .card-description {
+        max-width: fit-content;
+        //max-height: 20vh;
+        //overflow-y: auto;
+      }
+    }
+  }
+}

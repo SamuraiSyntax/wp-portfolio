@@ -1,0 +1,30 @@
+html {
+  div#wpadminbar {
+    position: fixed;
+    @include position-style(fixed);
+  }
+
+  body {
+    .wp-block-separator {
+      width: 100%;
+      height: 100%;
+    }
+
+    .wp-lightbox-overlay .lightbox-image-container {
+      z-index: 99997;
+    }
+
+    .wp-lightbox-overlay .wp-block-image {
+      z-index: 99998;
+    }
+
+    .wp-lightbox-overlay .scrim {
+      background-color: rgba(var(--br-bg-color-primary-rgb), .7);
+      z-index: 99996;
+    }
+
+    .wp-lightbox-container img {
+      cursor: none;
+    }
+  }
+}

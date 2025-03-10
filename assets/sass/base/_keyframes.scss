@@ -1,0 +1,62 @@
+@keyframes borderTransition {
+
+  0%,
+  100% {
+    border-radius: 8px 8px 8px 8px/ 8px 8px 8px 8px;
+  }
+
+  34% {
+    border-radius: 15px 15px 15px 15px/ 15px 15px 15px 15px;
+  }
+
+  50% {
+    border-radius: 8px 8px 8px 8px / 8px 8px 8px 8px;
+  }
+
+  67% {
+    border-radius: 15px 15px 15px 15px/ 15px 15px 15px 15px;
+  }
+}
+
+@keyframes animate {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+
+}
+
+@keyframes cursor-scale {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  58%,
+  100% {
+    transform: rotate(calc(var(--s, 1)*1turn))
+  }
+}

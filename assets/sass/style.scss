@@ -1,0 +1,35 @@
+// Importation des fichiers de base et des variables
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/dark';
+@import 'base/light';
+@import 'base/mixins';
+@import 'base/keyframes';
+@import 'base/font';
+@import 'base/typo';
+@import 'base/base';
+@import 'base/wordpress';
+@import 'base/utils';
+
+/* Importation de la mise en page */
+@import 'layout/header';
+@import 'layout/frontpage';
+@import 'layout/presentation';
+@import 'layout/realisations';
+@import 'layout/competences';
+@import 'layout/footer';
+
+/* Importation des composants */
+@import 'components/cursor';
+@import 'components/loader';
+@import 'components/contact';
+@import 'components/menu';
+@import 'components/gradient';
+@import 'components/card';
+@import 'components/cubes';
+@import 'components/circles';
+@import 'components/navbar';
+@import 'components/formulaires';
+@import 'components/links';
+
+/* Autres importations de fichiers Sass */

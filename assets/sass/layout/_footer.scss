@@ -1,0 +1,52 @@
+footer#colophon {
+  @include position-style(fixed, null, null, 0, null, 20);
+  @include flex-style(center, center, row, wrap, center);
+  gap: 1em;
+
+  width: 100%;
+  height: fit-content;
+  padding: 1em;
+
+  color: var(--br-text-color-secondary);
+  border-top: 1px solid var(--br-bg-color-tertiary);
+  background: rgba(var(--br-bg-color-primary-rgb), 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  ul {
+    @include flex-style(center, center, row, wrap, center);
+    gap: 1em;
+  }
+
+  .sep_footer {
+    @include flex-style(center, stretch, row, nowrap, center);
+    height: 1em;
+    width: 1px;
+    background-color: var(--br-border-color);
+  }
+
+  a.link_footer,
+  #menu-footer a {
+    font-size: clamp(0.9rem, 0.8296rem + 0.3005vw, 1.1rem);
+  }
+
+  @media (max-width: 781px) {
+    .sep_footer {
+      display: none;
+    }
+
+    .menu-footer {
+      display: none;
+    }
+
+    &:hover {
+      .sep_footer {
+        display: none;
+      }
+
+      .menu-footer {
+        display: flex;
+      }
+    }
+  }
+}

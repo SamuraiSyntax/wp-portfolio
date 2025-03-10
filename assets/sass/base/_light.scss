@@ -1,0 +1,39 @@
+// _light.scss
+// Application des variables pour le thème clair
+:root,
+:host,
+[data-br-theme=light] {
+  --br-invert-cursor-rgb: #{$dark-bg-color-primary-rgb};
+  --br-invert-cursor-hover-rgb: #{$light-bg-color-primary-rgb};
+  
+  --br-primary: #{$light-color-primary};
+  --br-primary-rgb: #{$light-color-primary-rgb};
+  --br-secondary: #{$light-color-secondary};
+  --br-secondary-rgb: #{$light-color-secondary-rgb};
+  --br-tertiary: #{$light-color-tertiary};
+  --br-tertiary-rgb: #{$light-color-tertiary-rgb};
+
+  --br-link-color: #{$light-link-color-primary};
+  --br-link-color-rgb: #{$light-link-color-primary-rgb};
+  --br-link-hover: #{$light-link-color-hover};
+  --br-link-hover-rgb: #{$light-link-color-hover-rgb};
+
+  --br-logo-color: #{$color-dark};
+  --br-logo-color-hover: #{$color-dark};
+
+  --br-bg-color-primary: #{$light-bg-color-primary};
+  --br-bg-color-primary-rgb: #{$light-bg-color-primary-rgb};
+  --br-bg-color-secondary: #{$light-bg-color-secondary};
+  --br-bg-color-secondary-rgb: #{$light-bg-color-secondary-rgb};
+  --br-bg-color-tertiary: #{$light-bg-color-tertiary};
+  --br-bg-color-tertiary-rgb: #{$light-bg-color-tertiary-rgb};
+
+  --br-border-color: #{$light-border-color};
+  --br-border-color-rgb: #{$light-border-color-rgb};
+
+  --br-text-color-primary: #{$light-text-color-primary};
+  --br-text-color-primary-rgb: #{$light-text-color-primary-rgb};
+  --br-text-color-secondary: #{$light-text-color-secondary};
+  --br-text-color-secondary-rgb: #{$light-text-color-secondary-rgb};
+  
+}

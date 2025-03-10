@@ -1,0 +1,31 @@
+html body {
+  .small-cursor {
+    @include position-style(fixed, null, null, null, null, 999999);
+    width: .5em;
+    height: .5em;
+    pointer-events: none;
+    background-color: rgba(var(--br-invert-cursor-rgb), 1);
+    border-radius: 50%;
+    box-sizing: border-box;
+    mix-blend-mode: exclusion;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+
+    &.hovered {
+      background-color: rgba(var(--br-invert-cursor-hover-rgb), 1);
+      width: 5em;
+      height: 5em;
+      animation: cursor-scale 0.5s ease-in-out;
+      mix-blend-mode: difference;
+    }
+
+    @media (max-width: 781px) {
+      display: none;
+    }
+  }
+
+  .one-point {
+    width: .1em;
+    height: .1em;
+  }
+}

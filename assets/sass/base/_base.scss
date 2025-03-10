@@ -1,0 +1,57 @@
+* {
+  transition: background-color $transition-duration ease-in, color $transition-duration ease-in;
+  font-family: Jura, 'Jura';
+  font-weight: 500;
+  line-height: 1.4;
+  stroke-width: 2px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  cursor: none;
+  scroll-behavior: smooth;
+  user-select: none;
+  position: relative;
+}
+
+html {
+  body {
+    font-family: Jura;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0px;
+    padding: 0px;
+    background: var(--br-bg-color-primary);
+    //overflow: hidden;
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+      width: .5em;
+      height: .5em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--br-tertiary);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: rgba(var(--br-bg-color-primary-rgb), .3);
+      backdrop-filter: blur(1em);
+      -webkit-backdrop-filter: blur(1em);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--br-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+      background-color: var(--br-primary);
+    }
+
+    #realisations-container::-webkit-scrollbar,
+    #competences-container::-webkit-scrollbar {
+      /* display: none; */
+      height: 5px;
+    }
+  }
+}

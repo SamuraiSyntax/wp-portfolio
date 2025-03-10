@@ -1,0 +1,108 @@
+.row {
+  @include flex-style(center, center, row, nowrap, center);
+  overflow: visible;
+  width: 100%;
+  margin: 0;
+  gap: 1em;
+
+  .col {}
+
+  .col-auto {}
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-1 {
+  gap: 1em;
+}
+
+.gap-2 {
+  gap: 2em;
+}
+
+.gap-3 {
+  gap: 3em;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-2 {
+  padding: 2em;
+}
+
+.f-grow-0 {
+  flex-grow: 0;
+}
+
+.f-grow-1 {
+  flex-grow: 1;
+}
+
+.f-grow-2 {
+  flex-grow: 2;
+}
+
+.f-grow-3 {
+  flex-grow: 3;
+}
+
+.arrow {
+  @include position-style(fixed, null, null, null, null, 999);
+  width: 16px;
+  height: 25px;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+
+  &.arrow-left {
+    top: 50%;
+    left: 0;
+    background-image: url('../../assets/images/Arrow_left.svg');
+    background-size: cover;
+  }
+
+  &.arrow-right {
+    top: 50%;
+    right: 0;
+    background-image: url('../../assets/images/Arrow_right.svg');
+    background-size: cover;
+  }
+
+  &.arrow-down {
+    bottom: 0;
+    background-image: url('../../assets/images/Arrow_Down.svg');
+    background-size: cover;
+    margin-bottom: 5%;
+  }
+}
+
+.dashicons_sections {
+  @include position-style(absolute, null, 25%, 10em, 25%, null);
+  @include flex-style(center, center, row, nowrap, center);
+
+  span.dashicons {
+    color: var(--br-text-color-primary);
+  }
+
+}
+
+.dashicons-info:before {
+  content: "\f348";
+  @include position-style(relative, null, null, null, null, 2);
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  mix-blend-mode: difference;
+}

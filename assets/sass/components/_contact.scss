@@ -1,0 +1,98 @@
+#modalContact {
+  @include position-style(fixed, 0, null, null, 0, 99999);
+  z-index: 99999;
+  display: none;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(0.2em);
+  -webkit-backdrop-filter: blur(0.2em);
+
+  &.active {
+    display: flex;
+  }
+
+  .bg-modal-close {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+  }
+
+  .modal-close {
+    box-sizing: content-box;
+    margin: 0;
+    width: min-content;
+    height: min-content;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid;
+    color: var(--br-text-color-primary);
+    background: transparent;
+  }
+
+  .card-modal-form {
+    gap: 1em;
+
+    form.wpcf7-form {
+      font-family: Jura, 'Jura';
+      @include flex-style(center, center, column, wrap, center);
+      width: auto;
+      gap: 0.5em;
+
+      .wpcf7-spinner {
+        display: none;
+      }
+
+      &.invalid .wpcf7-response-output {
+        color: palevioletred;
+        border-color: var(--br-link-hover);
+        border-radius: 1em;
+      }
+
+      .wpcf7-not-valid-tip {
+        color: var(--br-link-hover);
+        font-size: 1em;
+        font-weight: normal;
+        margin: 0;
+        padding: .1em;
+        width: 100%;
+        @include flex-style(center, center, row, wrap, center);
+      }
+
+      [data-name=ton-prenom],
+      [data-name=ton-email],
+      [data-name=ton-projet],
+      #ton-prenom,
+      #ton-email,
+      #ton-projet,
+      p {
+        width: 100%;
+        @include flex-style(center, center, row, wrap, center);
+      }
+
+      #ton-prenom,
+      #ton-email,
+      #ton-projet {
+        @include flex-style(center, center, row, wrap, center);
+        width: 100%;
+        padding: 0.5em 1em;
+        border-radius: 16px;
+        background: var(--br-invert-bg-color-primary);
+        color: var(--br-invert-text-color-primary);
+        line-height: 19px;
+        text-align: center;
+        text-transform: capitalize;
+      }
+
+      #ton-prenom:focus-visible,
+      #ton-email:focus-visible,
+      #ton-projet:focus-visible {
+        outline-offset: -0.1em;
+        outline: var(--br-bg-color-primary) auto;
+      }
+    }
+  }
+}
