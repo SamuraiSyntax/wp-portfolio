@@ -165,9 +165,7 @@ Le thème est régulièrement mis à jour pour assurer :
 
 ## 🌐 Liens Utiles
 
-- [Documentation](https://votre-site.com/docs)
-- [Démo en ligne](https://votre-site.com/demo)
-- [Changelog](https://votre-site.com/changelog)
+- [Démo en ligne](https://www.wp.dev-nanard.fr/)
 
 ## ⚡ Shortcodes Disponibles
 
